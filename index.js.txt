@@ -1,0 +1,17 @@
+// index.js
+const noBtn = document.getElementById('no-btn');
+const yesBtn = document.getElementById('yes-btn');
+const card = document.getElementById('card');
+
+let sizeIncrement = 0;
+
+noBtn.addEventListener('click', () => {
+  sizeIncrement += 5; // Incrementar tamaño por 5 cm
+  yesBtn.style.width = `${sizeIncrement}cm`;
+  yesBtn.style.height = `${sizeIncrement}cm`;
+});
+
+yesBtn.addEventListener('click', () => {
+  // Mostrar la carta
+  card.style.display = 'block';
+});

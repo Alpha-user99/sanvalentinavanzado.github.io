@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Valentín</title>
+  <style>
+    body {
+      font-family: Cambria bold, Cambria bold;
+      text-align: center;
+      background-image: url(https://static.vecteezy.com/system/resources/previews/015/229/651/non_2x/rose-with-a-present-box-put-on-red-roses-background-for-anniversary-mother-and-valentine-s-day-concept-photo.jpg); 
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 50px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 5px black;
+    }
+
+    #yes-btn {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    #no-btn {
+      background-color: #b3b3b3;
+      color: white;
+    }
+
+    #yes-btn:hover {
+      background-color: #ff3333;
+    }
+
+    #no-btn:hover {
+      background-color: #999999;
+    }
+
+    .card {
+      display: none;
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 2px 2px 10px black;
+      text-align: center;
+      color: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Quieres ser mi San Valentín?</h1>
+  <div class="button-container">
+    <button id="yes-btn">Sí</button>
+    <button id="no-btn">No</button>
+  </div>
+
+  <div class="card" id="card">
+    <p>Aceptaste ser mi San Valentín. Espero llegar a estar a tu lado las horas que Dios me lo permita. Gracias por estar en mi vida todo este tiempo.TE AMO de una manera que no puedo explicar pero si lo siente mi corazon entonces para mi esta muy bien, no puedo aguantar las ganas de ir a verte, abrazarte, besartre y hacerte reir porque esa sonrisa es la mas bella del mundo mundial.</p>
+    <p><strong>Att: Yo para ti.</strong></p>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no-btn');
+    const yesBtn = document.getElementById('yes-btn');
+    const card = document.getElementById('card');
+
+    let sizeIncrement = 0;
+
+    noBtn.addEventListener('click', () => {
+      sizeIncrement += 5; // Incrementar tamaño por 5 cm
+      yesBtn.style.width = `${sizeIncrement}cm`;
+      yesBtn.style.height = `${sizeIncrement}cm`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+      // Mostrar la carta
+      card.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
